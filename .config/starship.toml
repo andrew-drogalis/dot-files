@@ -1,0 +1,100 @@
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# Inserts a blank line between shell prompts
+add_newline = true
+
+format = """
+[](#606060)\
+$os\
+$username\
+[](bg:#0084FF fg:#606060)\
+$directory\
+[](fg:#0084FF bg:#86BBD8)\
+$git_branch\
+$git_status\
+[](fg:#86BBD8 bg:#06969A)\
+$nodejs\
+$rust\
+$golang\
+$php\
+$python\
+$c\
+[ ](fg:#06969A)\
+ \
+"""
+
+[os]
+format = "[$symbol $name](bg:#606060 fg:#C4E2F0)"
+
+disabled = false
+
+[os.symbols]
+Windows = " "
+Alpine = ""
+Fedora = ""
+
+[username]
+show_always = true
+style_user = "bg:#606060 fg:#C4E2F0"
+style_root = "bg:#606060 fg:#C4E2F0"
+format = '[]($style)'
+
+[directory]
+style = "fg:#000000 bg:#0084FF"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = ".../"
+
+[directory.substitutions]
+"~" = "󰜥 "
+
+[git_branch]
+symbol = ""
+style = "bg:#394260"
+format = '[[ $symbol $branch ](fg:#000000 bg:#86BBD8)]($style)'
+
+[git_status]
+style = "bg:#394260"
+format = '[[($all_status$ahead_behind )](fg:#000000 bg:#86BBD8)]($style)'
+
+[c]
+symbol = " "
+detect_extensions = ['c', 'cpp', 'h', 'hpp']
+style = "bg:#86BBD8"
+format = '[[ $symbol ($name $version) ](fg:#111111 bg:#06969A)]($style)'
+
+[nodejs]
+symbol = ""
+style = "bg:#212736"
+format = '[[ $symbol ($version) ](fg:#111111 bg:#06969A)]($style)'
+
+[rust]
+symbol = ""
+style = "bg:#212736"
+format = '[[ $symbol ($version) ](fg:#111111 bg:#06969A)]($style)'
+
+[golang]
+symbol = ""
+style = "bg:#212736"
+format = '[[ $symbol ($version) ](fg:#111111 bg:#06969A)]($style)'
+
+[python]
+symbol = ""
+style = "bg:#3B4252"
+format = '[[ $symbol ($version) ](fg:#111111 bg:#06969A)]($style)'
+
+[php]
+symbol = ""
+style = "bg:#212736"
+format = '[[ $symbol ($version) ](fg:#111111 bg:#06969A)]($style)'
+
+[time]
+disabled = false
+time_format = "%R" # Hour:Minute Format
+style = "bg:#1d2230"
+format = '[[  $time ](fg:#060606 bg:#e2e2e2)]($style)'
+
+# Disable the package module, hiding it from the prompt completely
+[package]
+disabled = true

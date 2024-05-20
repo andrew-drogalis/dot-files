@@ -1,0 +1,3 @@
+cd /home/user/Documents/Study-Docs-C++/cpp-reference-files
+
+tmex cpp-learn -l 2{41} -f 1 "nvim ."

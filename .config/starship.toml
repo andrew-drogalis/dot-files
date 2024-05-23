@@ -5,44 +5,35 @@
 add_newline = true
 
 format = """
-[](#606060)\
-$os\
-$username\
-[](bg:#0084FF fg:#606060)\
+[](#4C89F4)\
 $directory\
-[](fg:#0084FF bg:#86BBD8)\
+[](fg:#4C89F4 bg:#324b64)\
 $git_branch\
 $git_status\
-[](fg:#86BBD8 bg:#06969A)\
+[](fg:#324b64 bg:#36B198)\
 $nodejs\
 $rust\
 $golang\
 $php\
 $python\
 $c\
-[ ](fg:#06969A)\
+[ ](fg:#36B198)\
  \
 """
 
 [os]
-format = "[$symbol $name](bg:#606060 fg:#C4E2F0)"
-
+format = "[](bg:#5C4033 fg:#EEEEEE)"
 disabled = false
-
-[os.symbols]
-Windows = " "
-Alpine = ""
-Fedora = ""
 
 [username]
 show_always = true
-style_user = "bg:#606060 fg:#C4E2F0"
-style_root = "bg:#606060 fg:#C4E2F0"
+style_user = "bg:#5C4033 fg:#EEEEEE"
+style_root = "bg:#5C4033 fg:#EEEEEE"
 format = '[]($style)'
 
 [directory]
-style = "fg:#000000 bg:#0084FF"
-format = "[ $path ]($style)"
+style = "bold fg:#222222 bg:#4C89F4"
+format = "[  $path ]($style)"
 truncation_length = 3
 truncation_symbol = ".../"
 
@@ -52,42 +43,42 @@ truncation_symbol = ".../"
 [git_branch]
 symbol = ""
 style = "bg:#394260"
-format = '[[ $symbol $branch ](fg:#000000 bg:#86BBD8)]($style)'
+format = '[[ $symbol $branch ](fg:#EEEEEE bg:#324b64)]($style)'
 
 [git_status]
 style = "bg:#394260"
-format = '[[($all_status$ahead_behind )](fg:#000000 bg:#86BBD8)]($style)'
+format = '[[($all_status$ahead_behind )](fg:#EEEEEE bg:#324b64)]($style)'
 
 [c]
 symbol = " "
 detect_extensions = ['c', 'cpp', 'h', 'hpp']
 style = "bg:#86BBD8"
-format = '[[ $symbol ($name $version) ](fg:#111111 bg:#06969A)]($style)'
+format = '[[ $symbol ($name $version) ](bold fg:#222222 bg:#36B198)]($style)'
 
 [nodejs]
 symbol = ""
 style = "bg:#212736"
-format = '[[ $symbol ($version) ](fg:#111111 bg:#06969A)]($style)'
+format = '[[ $symbol ($version) ](bold fg:#222222 bg:#36B198)]($style)'
 
 [rust]
 symbol = ""
 style = "bg:#212736"
-format = '[[ $symbol ($version) ](fg:#111111 bg:#06969A)]($style)'
+format = '[[ $symbol ($version) ](bold fg:#222222 bg:#36B198)]($style)'
 
 [golang]
 symbol = ""
 style = "bg:#212736"
-format = '[[ $symbol ($version) ](fg:#111111 bg:#06969A)]($style)'
+format = '[[ $symbol ($version) ](bold fg:#222222 bg:#36B198)]($style)'
 
 [python]
 symbol = ""
 style = "bg:#3B4252"
-format = '[[ $symbol ($version) ](fg:#111111 bg:#06969A)]($style)'
+format = '[[ $symbol ($version) ](bold fg:#222222 bg:#36B198)]($style)'
 
 [php]
 symbol = ""
 style = "bg:#212736"
-format = '[[ $symbol ($version) ](fg:#111111 bg:#06969A)]($style)'
+format = '[[ $symbol ($version) ](bold fg:#222222 bg:#36B198)]($style)'
 
 [time]
 disabled = false

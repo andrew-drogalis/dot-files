@@ -1,0 +1,1 @@
+tmex neovim -l 2{51} -f 1 "nvim ."
